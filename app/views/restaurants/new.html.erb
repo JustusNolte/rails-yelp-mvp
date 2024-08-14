@@ -1,0 +1,26 @@
+<h1>New Restaurant</h1>
+<%= form_with model: @restaurant, local: true do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div>
+    <%= form.label :phone_number %>
+    <%= form.text_field :phone_number %>
+  </div>
+
+  <div>
+    <%= form.label :category %>
+    <%= form.select :category, ['chinese', 'italian', 'japanese', 'french', 'belgian'] %>
+  </div>
+
+  <div>
+    <%= form.submit 'Create Restaurant' %>
+  </div>
+<% end %>
